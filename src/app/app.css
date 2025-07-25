@@ -1,0 +1,11 @@
+.app-background {
+    background-image: var(--bg-short);
+    background-size: 100% auto; 
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 100%;
+    height: auto;
+    
+    min-height: 100vh;
+    padding: 2.1rem 0;
+}

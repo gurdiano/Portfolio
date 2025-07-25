@@ -11,3 +11,10 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes), provideClientHydration(withEventReplay())
   ]
 };
+
+export const Config = {
+  repName: 'Lorem Ipsum',
+  copyright: 'Copyright (c) 2025 Lorem Ipsum',
+  likedin: 'loremipsum',
+  email: 'loremipsumcontact@hotmail.com',
+};

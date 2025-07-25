@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --color-bg: #2E3135;
+    --color-highlight: #D99B77;
+
+    --bg-short: url('/assets/images/bg-short.png');
+    --bg-main: url('/assets/images/bg-main.png');
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  font-family: 'Inter';
+  font-weight: 400;
+  color: #ffffff;
+}

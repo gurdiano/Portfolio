@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Config } from '../../app.config';
 
 @Component({
   selector: 'app-home',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './home.css'
 })
 export class Home {
-
+  school = Config.school;
+  name = Config.repName;
 }

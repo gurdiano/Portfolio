@@ -1,0 +1,84 @@
+.home {
+    display: flex;
+    border: 2px solid green;
+    justify-content: center;
+}
+
+.character {
+    border: 2px solid red;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.classType {
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.p2, h1{
+    color: #ffffffbf
+}
+
+.p1 {
+    color: #ffffff80;
+    font-size: 20px;
+    margin: 0.8rem;
+}
+.p2 {
+    font-size: 23px;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+h1 {
+    font-size: 40px;
+}
+
+.avatar {
+    background: url('/assets/avatar/char.png');
+    width: 225px;
+    height: 690px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+}
+.role-progress {
+    width: 447px;
+    height: 130px;
+
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1;
+    overflow: hidden;
+
+    margin-top: 2rem;
+}
+.role-progress::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.14) 11%,
+        rgba(255, 255, 255, 0.00) 50%,
+        rgba(255, 255, 255, 0.15) 100%
+    );
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.role-progress p {
+    font-size: 20px;
+}

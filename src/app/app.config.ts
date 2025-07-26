@@ -17,4 +17,5 @@ export const Config = {
   copyright: 'Copyright (c) 2025 Lorem Ipsum',
   likedin: 'loremipsum',
   email: 'loremipsumcontact@hotmail.com',
+  school: 'COMPUTER SCIENCE'
 };

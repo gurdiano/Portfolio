@@ -1,7 +1,6 @@
 :host {
   --margin-el: 1.2rem;
   --gap--navbar: 2.7rem;
-  --text-size: 24px;
 }
 
 .navbar {
@@ -15,13 +14,12 @@
   display: flex;
   align-items: center;
 }
-
 .navbar::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 20px;
-  padding: 2px; /* espessura da "borda" */
+  padding: 2px; 
   background: linear-gradient(
     to bottom right,
     rgba(255, 255, 255, 0.14) 11%,
@@ -36,11 +34,11 @@
   pointer-events: none;
   z-index: 2;
 }
-
 .navbar {
   width: 95%;
-  height: 5rem; 
-  margin: 0 auto;
+  z-index: 1030;
+  left: 50%;
+  transform: translateX(-50%)
 }
 
 .icon {
@@ -50,62 +48,57 @@
   margin-left: var(--margin-el);
 }
 
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: var(--gap--navbar);
-    margin: auto auto;
-    align-items: center;
-    padding: 0;         
+.nav-link {
+  color: var(--tc);
+  font-weight: 300;
+  font-size: var(--ts-24);
 }
-
-.nav-menu li a {
-  font-family: 'Inter';
-  color:  #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: var(--text-size);
+.navbar-nav {
+  gap: 1.5rem;
 }
-
-.nav-menu li a:hover {
+.nav-link.active{
+  color: var(--color-highlight);
+  font-weight: 900;
+}
+.nav-link:hover {
   color: var(--color-highlight);
 }
 
-.contact {
-  width: 145px;
-  height: 50px;
+.btn-contact {
+  width: 8rem;
+  height: 3.2rem;
   background-color: var(--color-highlight);
-  border-radius: 20px;
+  border-radius: 1.8rem;
   display: flex;
   align-items: center;
   font-weight: 500;
-  font-size: var(--text-size);
+  font-size: var(--ts-24);
   justify-content: center;
-  margin-right: var(--margin-el);
-}
-
-.nav-menu li a.active{
-  color: var(--color-highlight);
+  margin-right: 1rem;
 }
 
 @media (max-width: 1024px) {
-  :host {
-    --gap--navbar: 1.5rem;
-    --text-size: 18px;
+  .navbar-nav {
+    gap: 1rem;
+
+  }
+  .nav-link {
+    font-size: var(--ts-20);
+    margin-left: 15%;
+  }
+
+  .btn-contact {
+    border-radius: 1rem;
+    margin-left: 10%;
   }
 }
 
 @media (max-width: 768px) {
-  :host {
-    --gap--navbar: 1.2rem;
-    --text-size: 15px;
-  }
+  .navbar-nav {
+    gap: 1rem;
 
-  .icon {
-    display: none;
   }
-
-  .contact {
-    width: 80px;
+  .nav-link {
+    font-size: var(--ts-20);
   }
 }

@@ -1,18 +1,28 @@
-<nav class="navbar">
-    <a routerLink="/">
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-            <path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/>
-        </svg>
+<nav class="navbar navbar-expand-lg position-fixed mx-auto">
+  <div class="container-fluid">
+    
+    <!-- Logo -->
+    <a class="navbar-brand" routerLink="/">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+        <path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/>
+      </svg>
     </a>
 
-    <ul class="nav-menu">
-        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-        <li><a routerLink="/skills" routerLinkActive="active">Skills</a></li>
-        <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
-        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-    </ul>
+    <!-- Botão do menu hambúrguer -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <div class="contact" routerLink="/contact">
-        Contact
+    <!-- Itens do menu -->
+    <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link fs-7" routerLink="/home" routerLinkActive="active">Home</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/skills" routerLinkActive="active">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/projects" routerLinkActive="active">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/about" routerLinkActive="active">About</a></li>
+        </ul>
+      
+        <div class="btn-contact" routerLink="/contact">Contact</div>
     </div>
+  </div>
 </nav>

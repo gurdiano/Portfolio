@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Config } from '../../app.config';
+import { RoleCard } from '../../components/role-card/role-card';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [RoleCard],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })

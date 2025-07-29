@@ -1,0 +1,110 @@
+:host {
+    --card-width: 27.9rem;
+    --card-height: 11rem;
+    --font-size: var(--ts-20);
+    --font-weight: 400;
+    --info-ml: 3%;
+}
+
+/* general-container */
+.role-progress {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}      
+.overlay-container {
+    width: var(--card-width);
+    height: var(--card-height);
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    z-index: 2;              
+}
+
+/* img-container */
+.img-container {
+    width: 38%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-role {
+    width: 70%;
+    height: 70%;
+    margin-bottom: 10%;
+    margin-left: 12%;
+    display: flex;
+}
+.c-img-fluid{
+    height: auto;
+    max-width: 100%;
+}
+
+/* infos-container */
+.info-container {
+    height: 100%;
+    flex: 1;
+}
+.info-container p {
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    margin: 0;
+    text-shadow: 0px 0px 12px rgb(0 0 0 / 80%);
+    margin-left: var(--info-ml);
+    margin-top: 24%;
+}
+.progress-container {
+    border: 1px solid var(--color-default);
+    background-color: var(--color-default);
+    width: 85%;
+    height: 14%;
+    margin-top: 7%;
+    margin-left: var(--info-ml);
+}
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: var(--color-highlight);
+}
+
+/* card-background-container */
+.card-container {
+    position: absolute;
+    z-index: 1;
+}
+.card-role {
+    width: 447px;
+    height: 130px;
+
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1;
+    overflow: hidden;
+
+    margin-top: 2rem;
+}
+.card-role::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.14) 11%,
+        rgba(255, 255, 255, 0.00) 50%,
+        rgba(255, 255, 255, 0.15) 100%
+    );
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 2;
+}

@@ -1,6 +1,7 @@
 :host {
     --card-width: 27.9rem;
     --card-height: 11rem;
+    --card-bg-height: calc(var(--card-height) - 3rem);
     --font-size: var(--ts-20);
     --font-weight: 400;
     --info-ml: 3%;
@@ -76,8 +77,8 @@
     z-index: 1;
 }
 .card-role {
-    width: 447px;
-    height: 130px;
+    width: var(--card-width);
+    height: var(--card-bg-height);
 
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.05);
@@ -107,4 +108,14 @@
     mask-composite: exclude;
     pointer-events: none;
     z-index: 2;
+}
+
+@media (max-width: 1700px){
+    :host {
+        --card-width: 23rem;
+        --card-height: 9.5rem;
+        --font-size: var(--ts-17);
+        --font-weight: 400;
+        --info-ml: 3%;
+    }
 }

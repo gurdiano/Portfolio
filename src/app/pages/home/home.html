@@ -1,5 +1,5 @@
 <div class="home">
-    <div class="character-container">
+    <div class="character-container border-c1">
         <div class="roles-left">
             <!-- Software Development -->
             <app-role-card class="item-01" imagem="assets/images/roles/connection-white.png" title="Software Development" [progress]="developmentProgress"></app-role-card>
@@ -38,5 +38,29 @@
             <!-- Software Engineering -->
             <app-role-card class="item-07" imagem="assets/images/roles/neural-network-white.png" title="Software Engineering" [progress]="softwareProgress"></app-role-card>
         </div>
+
+        <div class="role-card-sm-container">
+            <app-role-card-sm 
+            [automationProgress]="automationProgress" 
+            [developmentProgress]="developmentProgress"
+            [managementProgress]="managementProgress"
+            [cloudProgress]="cloudProgress"
+            [cybersecurityProgress]="cybersecurityProgress"
+            [softwareProgress]="softwareProgress"
+            [databaseProgress]="databaseProgress"
+            ></app-role-card-sm>
+        </div>
+    </div>
+
+    <div class="role-card-sm-container-2">
+            <app-role-card-sm 
+            [automationProgress]="automationProgress" 
+            [developmentProgress]="developmentProgress"
+            [managementProgress]="managementProgress"
+            [cloudProgress]="cloudProgress"
+            [cybersecurityProgress]="cybersecurityProgress"
+            [softwareProgress]="softwareProgress"
+            [databaseProgress]="databaseProgress"
+            ></app-role-card-sm>
     </div>
 </div>

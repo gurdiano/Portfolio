@@ -18,7 +18,6 @@
     --mt-item-06-base: 0.1rem;
     --mt-item-07-base: 1.6rem;
 }
-
 :host {
     --avatar-width: var(--avatar-width-base);
     --avatar-height: var(--avatar-height-base);
@@ -47,6 +46,8 @@
     justify-content: center;
     align-items: center;
     margin-top: 6rem;
+
+    flex-direction: column;
 }
 .character-container {
     display: flex;
@@ -119,7 +120,6 @@
     margin: 0;
     /* display: none; */
 }
-
 /* leftside -> */
 .roles-left {
     width:  50%;
@@ -145,7 +145,6 @@
     margin-right: var(--mr-item-03);
     margin-top: var(--mt-item-03);
 }
-
 /* rightside -> */
 .roles-right {
     width: 50%;
@@ -175,6 +174,15 @@
     margin-left: var(--ml-item-07);
     margin-top: var(--mt-item-07);
 }
+/* roles-small */
+.role-card-sm-container {
+    display: none;
+    width: 100%;
+}
+.role-card-sm-container-2 {
+    display: none;
+    width: 100%;
+}
 
 @media (max-width: 1700px){
     :host {
@@ -203,18 +211,30 @@
         margin-bottom: 1rem;
     }
 }
-
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
     .roles-left, .roles-right, .lines-container{
         display: none;
     }
-
     .character-container {
         justify-content: start;
     }
+    .role-card-sm-container {
+        display: block;
+    }
 }
-
+@media (max-width: 1024px) {
+}
 @media (max-width: 768px) {
+    .role-card-sm-container{
+        display: none;
+    }
+    .character-container {
+        justify-content: center;
+    }
+    .role-card-sm-container-2{
+        display: block;
+        height: calc(var(--avatar-height) + 5rem);
+    }
 }
 
 /* temp */

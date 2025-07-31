@@ -3,6 +3,7 @@ import { Config } from '../../app.config';
 import { RoleCard } from '../../components/role-card/role-card';
 import { RoleCardSm } from '../../components/role-card-sm/role-card-sm';
 import { BaseCard } from '../../components/base-card/base-card';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,7 @@ import { BaseCard } from '../../components/base-card/base-card';
     RoleCard,
     RoleCardSm,
     BaseCard,
+    RouterLink,
   ],
   templateUrl: './home.html',
   styleUrl: './home.css'

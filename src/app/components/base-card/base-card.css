@@ -36,3 +36,6 @@
     pointer-events: none;
     z-index: 2;
 }
+.card:hover {
+    background-color: var(--color-hover);
+}

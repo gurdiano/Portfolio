@@ -1,5 +1,6 @@
 <div class="home">
-    <div class="character-container border-c1">
+    <!-- Char -->
+    <div class="character-container">
         <div class="roles-left">
             <!-- Software Development -->
             <app-role-card class="item-01" imagem="assets/images/roles/connection-white.png" title="Software Development" [progress]="developmentProgress"></app-role-card>
@@ -65,4 +66,71 @@
             ></app-role-card-sm>
     </div>
 
+    <!-- Summary -->
+    <div class="summary-container">
+        <!-- Projects -->
+        <div class="summary-card">
+            <div class="card-overlay">
+                <div class="title">
+                    <h1>PROJECTS</h1>
+                </div>
+
+                <div class="mid-container">
+                    <div class="img-container bg">
+                        <img src="assets/person/project.png" alt="Ícone">
+                    </div>
+                </div>
+
+                <div class="bot-container">
+                    <div class="title">
+                        <h1>Check out some of the projects I've developed.</h1>
+                    </div>
+
+                    <div class="description">
+                        <p>They include practical applications using different stacks. The source code is available for review.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <app-base-card></app-base-card>
+        </div>  
+
+        <!-- Skills -->
+        <div class="summary-card">
+            <div class="card-overlay">
+                <div class="title">
+                    <h1>SKILLS</h1>
+                </div>
+
+                <div class="img-container">
+                    <img src="assets/images/svgs/skills.svg" alt="Ícone">
+                </div>
+            </div>
+            
+            <app-base-card></app-base-card>
+        </div>  
+        
+        <!-- About -->
+        <div class="summary-card">
+            <div class="card-overlay">
+                <div class="title">
+                    <h1>ABOUT</h1>
+                </div>
+
+                <div class="mid-container bn">
+                    <div class="c-container">
+                        <img src="assets/person/self.jpg" alt="Ícone">
+                    </div>
+                </div>
+
+                <div class="bot-container">
+                    <div class="description">
+                        <p>Learn more about me, including my background, education, work experience, studies, and a bit about my life story and personality.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <app-base-card></app-base-card>
+        </div>  
+    </div>
 </div>

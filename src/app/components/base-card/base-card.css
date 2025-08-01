@@ -5,6 +5,8 @@
 .card-container {
     position: absolute;
     z-index: 1;
+    width: var(--width);
+    height: var(--height);
 }
 .card {
     width: var(--width);

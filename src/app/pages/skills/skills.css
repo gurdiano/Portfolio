@@ -12,8 +12,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 9rem;
-
-    border: 1px solid red;
 }
 /* title */
 .title-page {
@@ -189,4 +187,13 @@
     .title-page {
         margin-bottom: 5%;
     }
+}
+
+/* temp */
+.character-card {
+    margin-bottom: 0.5rem;
+}
+app-skills-card {
+    width: 100%;
+    margin: 0.3rem 0;
 }

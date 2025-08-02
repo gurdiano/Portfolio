@@ -2,6 +2,8 @@
 :root {
     --color-bg: #2E3135;
     --color-highlight: #D99B77;
+    --color-h2: #D99B77CC;
+    --color-h3: #D99B7733;
     --color-footer: #2F3439;
     --color-default: #1B222680;
     --color-hover: #ffffff33;

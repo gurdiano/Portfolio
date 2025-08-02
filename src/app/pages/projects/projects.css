@@ -201,6 +201,9 @@
         --project-desc-size: var(--ts-15);
         --icon-width: 3rem;
         --icon-height: 3rem;
+        --title-size: var(--ts-30);
+        --title-border-width: 13rem;
+        --title-border-height: 4rem;
     }
     .download-btn, .git-btn {
         display: none;

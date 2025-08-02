@@ -1,0 +1,46 @@
+<div class="skills">
+    <div class="title-page">
+        <div class="border-svg-container ">
+            <img src="assets/images/svgs/title-border.svg" alt="">
+        </div>
+
+        <h1>Skills</h1>
+    </div>
+
+    <div class="character-card">
+        <div class="card-overlay">
+            <div class="column-1">
+                <div class="avatar-container">
+                    <img src="assets\avatar\char.png" alt="">
+                </div>
+            </div>
+            <div class="column-2">
+                <h1>{{ name }}</h1>
+                <h2 class="capitalize">{{ school | titlecase}}</h2>
+
+                <div class="lvl-container">
+                    <h3> LVL.{{ sem }} </h3>
+                </div>
+            </div>
+
+            <div class="useless-container"></div>
+
+            <div class="column-3">
+                <div class="role-container" id="role-1">
+                    <img src="assets\images\roles\neural-network-white.png" alt="">
+                    <h1>Software Eng.</h1>
+                </div>
+                <div class="role-container" id="role-2">
+                    <img src="assets\images\roles\data-science-white.png" alt="">
+                    <h1>Automation.</h1>
+                </div>
+                <div class="role-container" id="role-3">
+                    <img src="assets\images\roles\connection-white.png" alt="">
+                    <h1>Development.</h1>
+                </div>
+            </div>
+        </div>
+
+        <app-base-card></app-base-card>
+    </div>
+</div>

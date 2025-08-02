@@ -18,6 +18,7 @@ export const Config = {
   likedin: 'loremipsum',
   email: 'loremipsumcontact@hotmail.com',
   school: 'COMPUTER SCIENCE',
+  sem: '8',
   // about-page
   aboutDescription: 'Freelancer Programmer, 25 years old, fascinated by logic and programming, Java enthusiast, lover of software architecture and projects.',
   // about-page/backgroud-card

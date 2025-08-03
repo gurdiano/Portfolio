@@ -19,6 +19,14 @@ export const Config = {
   email: 'loremipsumcontact@hotmail.com',
   school: 'COMPUTER SCIENCE',
   sem: '8',
+  // contact-page
+  linkedinUrl: 'https://www.linkedin.com/in/gurdianotiago/',
+  githubUrl: 'https://github.com/gurdiano',
+  emailUrl: 'https://outlook.live.com/mail/0/',
+  facebookUrl: 'https://facebook.com/profile.php?id=61559880032696',
+  instagramUrl:  'https://www.instagram.com/tiagogurdiano/',
+  discordUrl: 'https://discord.com/',
+  whatsappUrl: 'https://web.whatsapp.com/',
   // about-page
   aboutDescription: 'Freelancer Programmer, 25 years old, fascinated by logic and programming, Java enthusiast, lover of software architecture and projects.',
   // about-page/backgroud-card

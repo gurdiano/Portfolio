@@ -40,4 +40,5 @@
 }
 .card:hover {
     background-color: var(--color-hover);
+    cursor: pointer;
 }

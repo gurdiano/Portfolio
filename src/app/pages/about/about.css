@@ -210,24 +210,6 @@
     color: var(--tc-75);
     margin-bottom: 9%;
 }
-/* bar-scroll */
-::-webkit-scrollbar {
-  width: 8px;
-}
-/* bg-scroll */
-::-webkit-scrollbar-track {
-  background: var(--color-default);
-  border-radius: 4px;
-}
-/* thumb-scroll */
-::-webkit-scrollbar-thumb {
-  background: var(--tc);
-  border-radius: 4px;
-}
-/* hover-thumb */
-::-webkit-scrollbar-thumb:hover {
-  background: var(--tc-h-75);
-}
 
 @media (max-width: 1024px) {
     :host {

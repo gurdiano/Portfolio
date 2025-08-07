@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { BaseCard } from '../../components/base-card/base-card';
 import { Config } from '../../app.config';
-import { TitleCasePipe } from '@angular/common';
+import { SlicePipe, TitleCasePipe } from '@angular/common';
 import { SkillsCard } from '../../components/skills-card/skills-card';
+import { DataJson } from '../../services/data/data-json';
 
 @Component({
   selector: 'app-skills',
@@ -10,12 +11,20 @@ import { SkillsCard } from '../../components/skills-card/skills-card';
     BaseCard,
     SkillsCard,
     TitleCasePipe,
+    SlicePipe,
   ],
   templateUrl: './skills.html',
   styleUrl: './skills.css'
 })
 export class Skills {
+  technologies$!: any;
   name = Config.repName
   school = Config.school
   sem = Config.sem
+
+  service = inject(DataJson)
+
+  constructor () {
+    this.technologies$ = this.service.getTechnologiesResponse();
+  }
 }

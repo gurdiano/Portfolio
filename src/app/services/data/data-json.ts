@@ -52,15 +52,136 @@ const project2 = {
     },
   ],
 }
+const techs = { 
+  techs: [
+    {
+      name : 'Python',
+      icon : 'assets/images/tecs/test/python.png',
+      progress: 70,
+    },
+    {
+      name : 'SQLAlchemy',
+      icon : 'assets/images/tecs/test/cogwheel.png',
+      progress: 60,
+    },
+    {
+      name : 'Flet',
+      icon : 'assets/images/tecs/test/loading-animation.png',
+      progress: 80,
+    },
+    {
+      name : 'SQLite',
+      icon : 'assets/images/tecs/test/sql.png',
+      progress: 45,
+    },
+    {
+      name : 'Angular',
+      icon : null,
+      progress: 67,
+    },
+    {
+      name : 'Java',
+      icon : null,
+      progress: 76,
+    },
+    {
+      name : 'SpringBoot',
+      icon : null,
+      progress: 69,
+    },
+    {
+      name : 'PostgreSQL',
+      icon : null,
+      progress: 83,
+    },
+    {
+      name : 'CSS',
+      icon : null,
+      progress: 8,
+    },
+    {
+      name : 'HTML',
+      icon : null,
+      progress: 26,
+    },
+    {
+      name : 'NODE',
+      icon : null,
+      progress: 11,
+    },
+    {
+      name : 'APACHE',
+      icon : null,
+      progress: 50,
+    },
+    {
+      name : 'EXPRESS',
+      icon : null,
+      progress: 20,
+    },
+    {
+      name : 'FLUTTER',
+      icon : null,
+      progress: 33,
+    },
+    {
+      name : 'FLUTTER',
+      icon : null,
+      progress: 33,
+    },
+    {
+      name : 'FLUTTER',
+      icon : null,
+      progress: 33,
+    },
+    {
+      name : 'FLUTTER',
+      icon : null,
+      progress: 33,
+    },
+    {
+      name : 'FLUTTER',
+      icon : null,
+      progress: 33,
+    },
+    {
+      name : 'FLUTTER',
+      icon : null,
+      progress: 33,
+    },
+    {
+      name : 'FLUTTER',
+      icon : null,
+      progress: 33,
+    },
+    {
+      name : 'FLUTTER',
+      icon : null,
+      progress: 33,
+    },
+    {
+      name : 'FLUTTER',
+      icon : null,
+      progress: 33,
+    },
+    {
+      name : 'FLUTTER',
+      icon : null,
+      progress: 33,
+    },
+  ]
+}
 
 @Injectable({
   providedIn: 'root'
 })
-
 export class DataJson {
   private projectResponse = [project1, project2];
 
   getProjectResponse() {
     return this.projectResponse;
+  }
+  getTechnologiesResponse() {
+    return techs.techs;
   }
 }

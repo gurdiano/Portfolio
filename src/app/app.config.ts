@@ -86,4 +86,21 @@ export const Config = {
       // },
     ],
   },
+  // skills-page 
+  skills: {
+    favorite: [
+      {
+        icon: 'assets/images/roles/neural-network-white.png',
+        role: 'Software Eng.',
+      },
+      {
+        icon: 'assets/images/roles/data-science-white.png',
+        role: 'Automation',
+      },
+      {
+        icon: 'assets/images/roles/connection-white.png',
+        role: 'Development',
+      },
+    ]
+  }
 };

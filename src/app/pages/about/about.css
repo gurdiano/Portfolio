@@ -256,23 +256,3 @@
         margin: 0;
     }
 }
-
-/* temp */
-.b1 {
-    border: 1px solid blue;
-}
-.b2 {
-    border: 1px solid green;
-}
-.b3 {
-    border: 1px solid red;
-}
-.b4 {
-    border: 1px solid yellow;
-}
-.bg {
-    background-color: #282c34;
-}
-.c1 {
-    border: 2px solid blue;
-}

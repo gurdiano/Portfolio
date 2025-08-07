@@ -63,15 +63,12 @@
                                 </div>
 
                                 <div class="text">
-                                    <h1>{{ eduCourse1 }}</h1>
-                                    <h2>{{ eduSchool1 }}</h2>
-                                    <h3>{{ eduPeriod1 }}</h3>
-                                    <h4>{{ eduStatus1 }}</h4>
-
-                                    <h1>{{ eduCourse2 }}</h1>
-                                    <h2>{{ eduSchoo2 }}</h2>
-                                    <h3>{{ eduPeriod2 }}</h3>
-                                    <h4>{{ eduStatus2 }}</h4>
+                                    @for (edu of education; track edu.course) {
+                                        <h1>{{ edu.course }}</h1>
+                                        <h2>{{ edu.school }}</h2>
+                                        <h3>{{ edu.period }}</h3>
+                                        <h4>{{ edu.status }}</h4>
+                                    }
                                 </div>
                             </div>
                             <app-base-card></app-base-card>
@@ -87,20 +84,12 @@
                                 </div>
 
                                 <div class="text">
-                                    <h1>{{ expPosition1 }}</h1>
-                                    <h2>{{ expCompany1 }}</h2>
-                                    <h3>{{ expPeriod1 }}</h3>
-                                    <h4>{{ expDescription1 }}</h4>
-
-                                    <h1>{{ expPosition2 }}</h1>
-                                    <h2>{{ expCompany2 }}</h2>
-                                    <h3>{{ expPeriod2 }}</h3>
-                                    <h4>{{ expDescription2 }}</h4>
-
-                                    <h1>{{ expPosition3 }}</h1>
-                                    <h2>{{ expCompany3 }}</h2>
-                                    <h3>{{ expPeriod3 }}</h3>
-                                    <h4>{{ expDescription3 }}</h4>
+                                    @for (exp of experience; track exp.position){
+                                        <h1>{{ exp.position }}</h1>
+                                        <h2>{{ exp.company }}</h2>
+                                        <h3>{{ exp.period }}</h3>
+                                        <h4>{{ exp.description }}</h4>
+                                    }
                                 </div>
                             </div>
                             <app-base-card></app-base-card>
@@ -108,11 +97,6 @@
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
-
-
-
-
 </div>

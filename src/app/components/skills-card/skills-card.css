@@ -11,16 +11,9 @@
     height: var(--height);
     position: relative;
 }
-/* base-card */
-.base-card-container {
-    position: absolute;
-    z-index: 1;
-    width: var(--width);
-    height: var(--height);
-}
 .base-card {
     width: var(--width);
-    height: var(--height);
+    height: 100%;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -54,7 +47,7 @@
 /* card-overlay */
 .card-overlay {
     width: var(--width);
-    height: var(--height);
+    height: 100%;
     position: absolute;
     z-index: 2;
     display: flex;
@@ -170,4 +163,14 @@
     .tecs .tec-container .name h1 {
         font-size: var(--ts-15);
     }
+}
+/* others hight */
+.oh {
+    height: calc(var(--height) + 15rem);
+}
+.oth {
+    /* border: 2px solid white; */
+    overflow-y: auto;
+    max-height: calc(var(--height) + 5rem);
+    width: 99%;
 }

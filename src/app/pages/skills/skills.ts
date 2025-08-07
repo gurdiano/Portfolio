@@ -18,11 +18,12 @@ import { DataJson } from '../../services/data/data-json';
 })
 export class Skills {
   technologies$!: any;
-  name = Config.repName
-  school = Config.school
-  sem = Config.sem
+  name = Config.repName;
+  school = Config.school;
+  sem = Config.sem;
+  favorite = Config.skills.favorite;
 
-  service = inject(DataJson)
+  service = inject(DataJson);
 
   constructor () {
     this.technologies$ = this.service.getTechnologiesResponse();

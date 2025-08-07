@@ -26,18 +26,26 @@
             <div class="useless-container"></div>
 
             <div class="column-3">
-                <div class="role-container" id="role-1">
-                    <img src="assets\images\roles\neural-network-white.png" alt="">
-                    <h1>Software Eng.</h1>
-                </div>
-                <div class="role-container" id="role-2">
-                    <img src="assets\images\roles\data-science-white.png" alt="">
-                    <h1>Automation.</h1>
-                </div>
-                <div class="role-container" id="role-3">
-                    <img src="assets\images\roles\connection-white.png" alt="">
-                    <h1>Development.</h1>
-                </div>
+                @if (favorite[0]) {
+                    <div class="role-container" id="role-1">
+                        <img [src]="favorite[0].icon || 'assets/images/roles/connection-white.png'">
+                        <h1>{{ favorite[0].role }}</h1>
+                    </div>
+                }
+                
+                @if (favorite[1]) {
+                    <div class="role-container" id="role-2">
+                        <img [src]="favorite[1].icon || 'assets/images/roles/connection-white.png'">
+                        <h1>{{ favorite[1].role }}</h1>
+                    </div>
+                }
+
+                @if (favorite[2]) {
+                    <div class="role-container" id="role-3">
+                        <img [src]="favorite[2].icon || 'assets/images/roles/connection-white.png'">
+                        <h1>{{ favorite[2].role }}</h1>
+                    </div>
+                }
             </div>
         </div>
 

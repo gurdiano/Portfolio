@@ -1,4 +1,4 @@
-<div class="app-background">
+<div class="app-background" [ngClass]="{ 'home-active' : isHome() }">
   <app-navbar></app-navbar>
   <main>
     <router-outlet />

@@ -16,6 +16,7 @@ export const appConfig: ApplicationConfig = {
 
 export const Config = {
   // general
+  userID: 2,
   repName: 'Lorem Ipsum',
   copyright: 'Copyright (c) 2025 Lorem Ipsum',
   likedin: 'loremipsum',

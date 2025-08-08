@@ -1,15 +1,18 @@
 import { Injectable, inject} from '@angular/core';
-import { DataJson } from '../data/data-json';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Project } from '../../models/project';
+import { Config } from '../../app.config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectService {
-  data = inject(DataJson);
+  private http = inject(HttpClient);
+  private api = 'http://pimenta.mercusysddns.com:5000/api';
+  private id = Config.userID;
 
-  private projectsResponse = this.data.getProjectResponse()
-  
-  getProjects(): any {
-    return this.projectsResponse;
+  getProjects(): Observable<Project[]> {
+    return this.http.get<Project[]>(`${this.api}/Project/GetByUserId/${this.id}`);
   }
 }

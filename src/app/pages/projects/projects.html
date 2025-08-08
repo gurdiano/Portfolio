@@ -7,21 +7,21 @@
         <h1>Projects</h1>
     </div>
 
-    @for (project of projects$; track project) {
+    @for (project of projects$ | async; track project.name) {
         <app-project-card 
         [projectIcon]="project.icon"
         [name]="project.name"
         [description]="project.description"
-        [tech1]="project.tech[0].name"
-        [tech2]="project.tech[1].name"
-        [tech3]="project.tech[2].name"
-        [tech4]="project.tech[3].name"
-        [techIconPath1]="project.tech[0].icon"
-        [techIconPath2]="project.tech[1].icon"
-        [techIconPath3]="project.tech[2].icon"
-        [techIconPath4]="project.tech[3].icon"
         [gitRepository]="project.git"
         [downloadLink]="project.download"
+        [techIconPath1]="project.technologies[0] ? project.technologies[0].icon.path : '' "
+        [techIconPath2]="project.technologies[1] ? project.technologies[1].icon.path : '' "
+        [techIconPath3]="project.technologies[2] ? project.technologies[2].icon.path : '' "
+        [techIconPath4]="project.technologies[3] ? project.technologies[3].icon.path : '' "
+        [tech1]="project.technologies[0] ? project.technologies[0].name : '' "
+        [tech2]="project.technologies[1] ? project.technologies[1].name : '' "
+        [tech3]="project.technologies[2] ? project.technologies[2].name : '' "
+        [tech4]="project.technologies[3] ? project.technologies[3].name : '' "
         ></app-project-card>
     }
 </div>

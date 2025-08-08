@@ -17,12 +17,10 @@ import { AsyncPipe, JsonPipe } from '@angular/common';
 })
 export class Projects {
   projects$!: Observable<Project[]>;
-  nulooo= null;
 
   projectService = inject(ProjectService);
 
   constructor () {
     this.projects$ = this.projectService.getProjects();
-    // this.projectService._getProjects();
   }
 }

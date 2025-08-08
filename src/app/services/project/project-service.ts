@@ -9,10 +9,10 @@ import { Config } from '../../app.config';
 })
 export class ProjectService {
   private http = inject(HttpClient);
-  private api = 'http://pimenta.mercusysddns.com:5000/api';
+  private apiUrl = 'http://pimenta.mercusysddns.com:5000/api';
   private id = Config.userID;
 
   getProjects(): Observable<Project[]> {
-    return this.http.get<Project[]>(`${this.api}/Project/GetByUserId/${this.id}`);
+    return this.http.get<Project[]>(`${this.apiUrl}/Project/GetByUserId/${this.id}`);
   }
 }

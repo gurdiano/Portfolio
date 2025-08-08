@@ -10,16 +10,16 @@
         </div>
 
         <div class="tecs" [ngClass]="{ 'oth' : technologies.length > 4 }">
-            @for (tech of technologies; track tech.name){
+            @for (techs of technologies; track techs.progress){
                 <!-- tech -->
                 <div class="tec-container">
                     <div class="name">
-                        <img [src]="tech.icon || 'assets/images/tecs/code.png'">
-                        <h1>{{ tech.name }}</h1>
+                        <img [src]="techs.technologies.icon.path || 'assets/images/tecs/code.png'">
+                        <h1>{{ techs.technologies.name }}</h1>
                     </div>
 
                     <div class="progress-bar-container">
-                        <div class="bar" [style.width.%]="tech.progress"></div>
+                        <div class="bar" [style.width.%]="techs.progress"></div>
                     </div>
                 </div>
             }

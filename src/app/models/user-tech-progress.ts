@@ -1,10 +1,11 @@
-import { Role } from "./role";
 import { User } from "./user";
+import { Technology } from "./technology";
+
 
 export interface UserTechProgress { 
     userId: number;
     technologyId: number;
     progress: number;
-    role: Role;
     user: User;
+    technologies: Technology;
 }

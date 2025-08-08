@@ -10,5 +10,5 @@ import { UserTechProgress } from '../../models/user-tech-progress';
 })
 export class SkillsCard {
   @Input() stackName?: string = 'stack';
-  @Input() technologies!: UserTechProgress[];
+  @Input() technologies!: any;
 }

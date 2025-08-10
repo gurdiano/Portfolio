@@ -161,6 +161,7 @@
     font-weight: var(--fw);
     color: var(--tc-75);
     margin: 3% 0;
+    text-align: justify;
 }
 /* right-cards */
 .info-card{
@@ -209,6 +210,7 @@
     font-weight: var(--fw);
     color: var(--tc-75);
     margin-bottom: 9%;
+    text-align: justify;
 }
 
 @media (max-width: 1024px) {

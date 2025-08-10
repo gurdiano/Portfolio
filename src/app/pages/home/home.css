@@ -310,6 +310,7 @@ app-base-card{
 .bot-container .description p{
     color: var(--tc-75);
     font-size: var(--ts-20);
+    text-align: justify;
 }
 
 @media (max-width: 8000px) {

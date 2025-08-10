@@ -171,6 +171,93 @@ const techs = {
     },
   ]
 }
+const docs =  {
+  documents: [
+    {
+      name: 'UX/UI',
+      icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1200px-Figma-logo.svg.png',
+      link: 'https://www.figma.com/'
+    },
+    {
+      name: 'UML',
+      icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/1200px-Google_Drive_icon_%282020%29.svg.png',
+      link: 'https://app.diagrams.net/',
+    },
+    {
+      name: 'AWS',
+      icon: null,
+      link: 'https://aws.amazon.com/pt/',
+    }
+  ]
+}
+const imgs = {
+  images : [
+    {
+      src: 'assets/person/project.png',
+    },
+    {
+      src: 'assets/person/project.png',
+    },
+    {
+      src: 'assets/person/project.png',
+    },
+    {
+      src: 'assets/person/project.png',
+    },
+    {
+      src: 'assets/person/project.png',
+    },
+    {
+      src: 'assets/person/project.png',
+    }
+  ]
+}
+const downloads = { 
+  "plataforms": [
+    {
+      "name": "Windows",
+      "downloadTypes": [
+        {
+          "name": "Exe",
+          "link": "https://novabrasilfm.com.br/app/uploads/2025/03/meme-chico-buarque3.webp",
+          "iconRef": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNiy0F_WLI_pTKgp6UTjKHNXLllGJSYbmvJQ&s"
+        },
+
+        {
+          "name": "Zip",
+          "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWKBLouIMCnTNHponwwJ3Gk1lykgp5omTaXlIriFapuHgmtwldAu-XyOBoiBaL9f4XbWw&usqp=CAU",
+          "iconRef": "https://cdn-icons-png.flaticon.com/512/9704/9704802.png"
+        },
+
+        {
+          "name": "4Shared",
+          "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWKBLouIMCnTNHponwwJ3Gk1lykgp5omTaXlIriFapuHgmtwldAu-XyOBoiBaL9f4XbWw&usqp=CAU",
+          "iconRef": "https://play-lh.googleusercontent.com/zrIPAjXaMgqJJoKAXDDqKlkFADZ3OxwpiUcilHbYemS8l3aIlGSohNcsuzpnVQXZfJI0"
+        }
+      ]
+    }
+  ]
+}
+const steps = {
+  name: 'Installation guide',
+  steps: [
+    {
+      name: 'Step 1:',
+      img: 'https://storage.googleapis.com/support-forums-api/attachment/thread-5860338-5265896632292218541.png',
+      description: 'Lorem ipsum dolor sit amet. Eos molestiae architecto et laudantium nihil est commodi itaque eos dolore quod qui adipisci provident. Non esse velit est corporis quia vel dicta dolor. Hic rerum vitae ut quae quasi vel dolor adipisci ea quas voluptatibus non quam provident qui quos. Ut voluptatibus distinctio et enim natus aut tenetur quia. Et cumque quia sed sunt provident sed dolorum quia et facilis eius quo perspiciatis velit ut provident facilis et rerum voluptas. Non internos consequuntur ut aspernatur nulla qui atque pariatur qui libero voluptas',
+    },
+    {
+      name: 'Step 2:',
+      img: 'https://support.microsoft.com/images/en-us/8aaf7049-968a-4cf4-9870-53086b5e875b',
+      description: 'Lorem ipsum dolor sit amet. Eos molestiae architecto et laudantium nihil est commodi itaque eos dolore quod qui adipisci provident. Non esse velit est corporis quia vel dicta dolor. Hic rerum vitae ut quae quasi vel dolor adipisci ea quas voluptatibus non quam provident qui quos. Ut voluptatibus distinctio et enim natus aut tenetur quia. Et cumque quia sed sunt provident sed dolorum quia et facilis eius quo perspiciatis velit ut provident facilis et rerum voluptas. Non internos consequuntur ut aspernatur nulla qui atque pariatur qui libero voluptas',
+    },
+    {
+      name: 'Step 3:',
+      img: null,
+      description: 'Lorem ipsum dolor sit amet. Eos molestiae architecto et laudantium nihil est commodi itaque eos dolore quod qui adipisci provident. Non esse velit est corporis quia vel dicta dolor. Hic rerum vitae ut quae quasi vel dolor adipisci ea quas voluptatibus non quam provident qui quos. Ut voluptatibus distinctio et enim natus aut tenetur quia. Et cumque quia sed sunt provident sed dolorum quia et facilis eius quo perspiciatis velit ut provident facilis et rerum voluptas. Non internos consequuntur ut aspernatur nulla qui atque pariatur qui libero voluptas',
+    },
+  ]
+}
 
 @Injectable({
   providedIn: 'root'
@@ -183,5 +270,17 @@ export class DataJson {
   }
   getTechnologiesResponse() {
     return techs.techs;
+  }
+  getDocuments() {
+    return docs;
+  }
+  getImages() {
+    return imgs;
+  }
+  getDownloads() {
+    return downloads;
+  }
+  getSteps() {
+    return steps;
   }
 }

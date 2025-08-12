@@ -258,6 +258,13 @@ const steps = {
     },
   ]
 }
+const gits = {
+  gits: [
+    {name : 'Portfolio', link: 'https://github.com/gurdiano'},
+    {name : 'PortfolioAPI', link: 'https://github.com/gurdiano'},
+    {name : 'PortfolioDLC', link: 'https://github.com/gurdiano'},
+  ]
+}
 
 @Injectable({
   providedIn: 'root'
@@ -282,5 +289,8 @@ export class DataJson {
   }
   getSteps() {
     return steps;
+  }
+  getGits() {
+    return gits;
   }
 }

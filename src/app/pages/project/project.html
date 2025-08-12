@@ -69,72 +69,105 @@
         </div>
     </div>
 
-    <!-- images -->
-    <div class="topic-bar-container">
-        <div class="overlay-card">
-            <h1>Images</h1>
-            <div class="img-container">
-                <img src="" alt="">
-            </div>
-            <div class="chevron-container">
-                <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"/></svg>
-            </div>
-        </div>
-        <div class="card"></div>
-    </div>
-    <div class="c-grid">
-        <div class="row">
-            @for (img of data3.images; track img){
-                <div class="img-container">
-                    <img [src]="img.src" alt="ícone">
-                </div>
-            }
-        </div>
-    </div>
-
-    <!-- Donwload -->
-    <div class="topic-bar-container">
-        <div class="overlay-card">
-            <h1>Download</h1>
-            <div class="img-container">
-                <img src="" alt="">
-            </div>
-            <div class="chevron-container">
-                <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"/></svg>
-            </div>
-        </div>
-        <div class="card"></div>
-    </div>
-
-    @for (plat of data4.plataforms; track plat){
-       <div class="plataform-container">
-            <h1>Choose the Plataform</h1>
-            <div class="downloads-container">
-                <h5> {{ plat.name }} - </h5>
-
-                @for (type of plat.downloadTypes; track type) {
-                    <a class="c-btn" [href]="type.link" target="_blank">
-                        <div class="img-container">
-                            <img [src]="type.iconRef || 'assets/images/tecs/cogwheel.png'">
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+        <!-- item-1 -->
+        <div class="accordion-item">
+            <!-- header -->
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <div class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    <!-- download-header -->
+                    <div class="topic-bar-container">
+                        <div class="overlay-card">
+                            <h1>Images</h1>
+                            <div class="img-container">
+                                <img src="" alt="">
+                            </div>
+                            <div class="chevron-container">
+                                <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"/></svg>
+                            </div>
                         </div>
-                        <h1>{{ type.name }}</h1>
-                    </a>
-                }
+                        <div class="card"></div>
+                    </div>
+                </div>
+            </h2>
+            <!-- content -->
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body">
+                    <!-- download content -->
+                    <div class="c-grid">
+                        <div class="row">
+                            @for (img of data3.images; track img){
+                                <div class="img-container">
+                                    <img [src]="img.src" alt="ícone">
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    }
-
-    @if (data5; as guide) {
-        <div class="step-container">
-            <h1>{{  guide.name }}</h1>
-
-            @for (step of guide.steps; track step){
-                <h2>{{ step.name }}</h2>
-                <div class="img-container">
-                    <img [src]="step.img">
+        <!-- item-2 -->
+        <div class="accordion-item">
+            <!-- header  -->
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                    <!-- photos header -->
+                    <div class="topic-bar-container">
+                        <div class="overlay-card">
+                            <h1>Download</h1>
+                            <div class="img-container">
+                                <img src="" alt="">
+                            </div>
+                            <div class="chevron-container">
+                                <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"/></svg>
+                            </div>
+                        </div>
+                        <div class="card"></div>
+                    </div>
                 </div>
-                <h3>{{ step.description }}</h3>
-            }
+            </h2>
+            <!-- content -->
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body">
+                    <!-- photos content -->
+                    @for (plat of data4.plataforms; track plat){
+                    <div class="plataform-container">
+                            <h1>Choose the Plataform</h1>
+                            <div class="downloads-container">
+                                <h5> {{ plat.name }} - </h5>
+
+                                @for (type of plat.downloadTypes; track type) {
+                                    <a class="c-btn" [href]="type.link" target="_blank">
+                                        <div class="img-container">
+                                            <img [src]="type.iconRef || 'assets/images/tecs/cogwheel.png'">
+                                        </div>
+                                        <h1>{{ type.name }}</h1>
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    }
+                    @if (data5; as guide) {
+                        <div class="step-container">
+                            <h1>{{  guide.name }}</h1>
+
+                            @for (step of guide.steps; track step){
+                                <h2>{{ step.name }}</h2>
+                                <div class="img-container">
+                                    <img [src]="step.img">
+                                </div>
+                                <h3>{{ step.description }}</h3>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
         </div>
-    }
+    </div>
 </div>

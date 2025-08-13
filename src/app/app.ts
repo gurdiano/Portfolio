@@ -3,6 +3,7 @@ import { Router, RouterOutlet } from '@angular/router';
 import { Navbar } from './components/navbar/navbar';
 import { Footer } from './components/footer/footer';
 import { NgClass } from '@angular/common';
+import { LinkedProjectsCard } from './components/linked-projects-card/linked-projects-card';
 
 @Component({
   selector: 'app-root',

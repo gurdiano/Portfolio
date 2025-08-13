@@ -1,0 +1,98 @@
+:host {
+    --icon-width: 3.5rem;
+    --icon-height: 3.5rem;
+    --title-height: 3.5rem;
+    --projects-mb: 0.5rem;
+    --card-width: 100%;
+    --card-height: 100%;
+}
+/* card */
+.linked-project-cards {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+
+    /* border: 1px solid red; */
+}
+/* base */
+app-base-card {
+    --card-width: 100%;
+    --card-height: 100%;
+}
+/* overlay */
+.card-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}   
+/* title */
+.card-overlay .title {
+    width: 100%;
+    height: var(--title-height);
+    display: flex;
+    align-items: center;
+
+    /* border: 1px solid yellow; */
+}
+.card-overlay .title h1 {
+    margin: 0 auto;
+    width: fit-content;
+    fill: var(--tc-75);
+    font-size: var(--ts-20);
+    font-weight: 600;
+}
+/* projects-container */
+.projects {
+    overflow: auto;
+    max-height: calc(var(--card-height) - (2 * var(--title-height)) );
+    width: 99%;
+}
+/* project */
+.project-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: var(--projects-mb);
+
+    /* border: 1px solid blue; */
+}
+.project-container .avatar-icon {
+    background-color: var(--color-default);
+    width: var(--icon-width);
+    height: var(--icon-height);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--tc-75);
+    overflow: hidden;
+    margin-right: 1rem;
+    margin-left: 1.5rem;
+}
+.project-container .avatar-icon img {
+    height: 60%;
+    width: auto;
+    max-width: 100%;
+}
+.project-container h1 {
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
+    font-size: var(--ts-20);
+    fill: var(--tc);
+    font-weight: 300;
+}
+
+@media (max-width: 1700px){
+    :host {
+        --icon-width: 3rem;
+        --icon-height: 3rem;
+    }
+    .card-overlay .title h1 {
+        font-size: var(--ts-17);
+    }
+    .project-container h1 {
+        font-size: var(--ts-17);
+    }
+}

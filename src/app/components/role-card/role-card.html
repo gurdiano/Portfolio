@@ -8,7 +8,7 @@
         </div>
 
         <div class="info-container">
-            <p>{{title}}:</p>
+            <p>{{name}}:</p>
 
             <div class="progress-container">
                 <div class="progress-bar" [style.width.%]="progress"></div>
@@ -18,5 +18,11 @@
 
     <div class="card-container">
         <div class="card-role"></div>
+    </div>
+
+    <div class="c-flex-end">
+        <div class="card-hover">
+            <ng-content></ng-content>
+        </div>
     </div>
 </div>

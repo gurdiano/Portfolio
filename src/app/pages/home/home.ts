@@ -4,6 +4,7 @@ import { RoleCard } from '../../components/role-card/role-card';
 import { RoleCardSm } from '../../components/role-card-sm/role-card-sm';
 import { BaseCard } from '../../components/base-card/base-card';
 import { RouterLink } from '@angular/router';
+import { LinkedProjectsCard } from '../../components/linked-projects-card/linked-projects-card';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,7 @@ import { RouterLink } from '@angular/router';
     RoleCardSm,
     BaseCard,
     RouterLink,
+    LinkedProjectsCard,
   ],
   templateUrl: './home.html',
   styleUrl: './home.css'

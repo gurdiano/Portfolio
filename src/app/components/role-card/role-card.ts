@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class RoleCard {
   @Input() imagem!: string;
-  @Input() title!: string;
+  @Input() name!: string;
   @Input() progress?: number;
 }

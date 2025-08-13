@@ -353,6 +353,13 @@ app-base-card{
     .summary-container{
         max-width: 1366px;
     }
+    .bot-container .title h1{
+        font-size: var(--ts-17);
+    }
+    .bot-container .description p{
+        font-size: var(--ts-17);
+        margin-top: 1rem;
+    }
 }
 @media (max-width: 1300px) {
     .roles-left, .roles-right, .lines-container{

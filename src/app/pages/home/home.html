@@ -3,11 +3,13 @@
     <div class="character-container">
         <div class="roles-left">
             <!-- Software Development -->
-            <app-role-card class="item-01" imagem="assets/images/roles/connection-white.png" title="Software Development" [progress]="developmentProgress"></app-role-card>
+            <app-role-card class="item-01" imagem="assets/images/roles/connection-white.png" name="Software Development" [progress]="developmentProgress">
+                <app-linked-projects-card></app-linked-projects-card>
+            </app-role-card>
             <!-- Automation -->
-            <app-role-card class="item-02" imagem="assets/images/roles/data-science-white.png" title="Automation" [progress]="automationProgress"></app-role-card>
+            <app-role-card class="item-02" imagem="assets/images/roles/data-science-white.png" name="Automation" [progress]="automationProgress"></app-role-card>
             <!-- Database Management -->
-            <app-role-card class="item-03" imagem="assets/images/roles/data-engineer-white.png" title="Database Management" [progress]="databaseProgress"></app-role-card>
+            <app-role-card class="item-03" imagem="assets/images/roles/data-engineer-white.png" name="Database Management" [progress]="databaseProgress"></app-role-card>
         </div>
     
         <div class="character">
@@ -31,13 +33,13 @@
     
         <div class="roles-right">
             <!-- Project Management -->
-            <app-role-card class="item-04" imagem="assets/images/roles/architecture-white.png" title="Project Management" [progress]="managementProgress"></app-role-card>
+            <app-role-card class="item-04" imagem="assets/images/roles/architecture-white.png" name="Project Management" [progress]="managementProgress"></app-role-card>
             <!-- Cloud Computing -->
-            <app-role-card class="item-05" imagem="assets/images/roles/big-data-white.png" title="Cloud Computing" [progress]="cloudProgress"></app-role-card>
+            <app-role-card class="item-05" imagem="assets/images/roles/big-data-white.png" name="Cloud Computing" [progress]="cloudProgress"></app-role-card>
             <!-- Cybersecurity -->
-            <app-role-card class="item-06" imagem="assets/images/roles/sensor-white.png" title="Cybersecurity" [progress]="cybersecurityProgress"></app-role-card>
+            <app-role-card class="item-06" imagem="assets/images/roles/sensor-white.png" name="Cybersecurity" [progress]="cybersecurityProgress"></app-role-card>
             <!-- Software Engineering -->
-            <app-role-card class="item-07" imagem="assets/images/roles/neural-network-white.png" title="Software Engineering" [progress]="softwareProgress"></app-role-card>
+            <app-role-card class="item-07" imagem="assets/images/roles/neural-network-white.png" name="Software Engineering" [progress]="softwareProgress"></app-role-card>
         </div>
 
         <div class="role-card-sm-container">

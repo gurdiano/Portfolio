@@ -1,0 +1,22 @@
+<div class="linked-project-cards">  
+    <div class="card-overlay">
+        <div class="title">
+            <h1>Projects: </h1>
+        </div>
+
+        <div class="projects"> 
+            @for (project of role.projects; track project){
+                <div class="project-container">
+                    <div class="avatar-icon">
+                        <img [src]="project.icon || 'favicon.ico'" alt="">
+                    </div>
+
+                    <h1> {{ project.name }}</h1>
+
+                </div>
+            }
+        </div>
+    </div>
+    
+    <app-base-card></app-base-card>
+</div>

@@ -119,3 +119,30 @@
         --info-ml: 3%;
     }
 }
+
+
+/* hover */
+.card-hover {
+    position: absolute;
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none; 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    height: 16rem;
+}
+.role-progress:hover .card-hover{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.dn {
+    display: none;
+}
+
+.c-flex-end {
+    width: 100%;
+    height: 0;
+    display: flex;
+    align-items: start;
+}

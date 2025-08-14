@@ -16,7 +16,7 @@ export const appConfig: ApplicationConfig = {
 
 export const Config = {
   // general
-  userID: 2,
+  userID: 3,
   repName: 'Lorem Ipsum',
   copyright: 'Copyright (c) 2025 Lorem Ipsum',
   likedin: 'loremipsum',
@@ -31,6 +31,8 @@ export const Config = {
   instagramUrl:  'https://www.instagram.com/tiagogurdiano/',
   discordUrl: 'https://discord.com/',
   whatsappUrl: 'https://web.whatsapp.com/',
+  bucketUrl: 'https://portfoliobucketts.s3.sa-east-1.amazonaws.com/',
+  apiUrl: 'http://pimenta.mercusysddns.com:5000/api/',
   // about-page
   about: {
     subTitle: 'Freelancer Programmer, 25 years old, fascinated by logic and programming, Java enthusiast, lover of software architecture and projects.',

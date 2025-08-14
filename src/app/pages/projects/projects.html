@@ -9,19 +9,23 @@
 
     @for (project of projects$ | async; track project.name) {
         <app-project-card 
-        [projectIcon]="project.icon"
+        [projectIcon]="bucket + project.icon"
         [name]="project.name"
         [description]="project.description"
-        [gitRepository]="project.git"
-        [downloadLink]="project.download"
-        [techIconPath1]="project.technologies[0] ? project.technologies[0].icon.path : '' "
-        [techIconPath2]="project.technologies[1] ? project.technologies[1].icon.path : '' "
-        [techIconPath3]="project.technologies[2] ? project.technologies[2].icon.path : '' "
-        [techIconPath4]="project.technologies[3] ? project.technologies[3].icon.path : '' "
+  
+        [techIconPath1]="project.technologies[0] ? bucket + project.technologies[0].icon.path : '' "
+        [techIconPath2]="project.technologies[1] ? bucket + project.technologies[1].icon.path : '' "
+        [techIconPath3]="project.technologies[2] ? bucket + project.technologies[2].icon.path : '' "
+        [techIconPath4]="project.technologies[3] ? bucket + project.technologies[3].icon.path : '' "
         [tech1]="project.technologies[0] ? project.technologies[0].name : '' "
         [tech2]="project.technologies[1] ? project.technologies[1].name : '' "
         [tech3]="project.technologies[2] ? project.technologies[2].name : '' "
         [tech4]="project.technologies[3] ? project.technologies[3].name : '' "
         ></app-project-card>
     }
+
+
 </div>
+
+<!-- [gitRepository]="project.config.gitConfig.gits[0].link" -->
+<!-- [downloadLink]="project.config.downloadConfig.plataforms[0].link" -->

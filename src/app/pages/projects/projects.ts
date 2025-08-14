@@ -4,6 +4,7 @@ import { ProjectCard } from '../../components/project-card/project-card';
 import { Observable } from 'rxjs';
 import { Project } from '../../models/project';
 import { AsyncPipe, JsonPipe } from '@angular/common';
+import { Config } from '../../app.config';
 
 @Component({
   selector: 'app-projects',
@@ -17,6 +18,7 @@ import { AsyncPipe, JsonPipe } from '@angular/common';
 })
 export class Projects {
   projects$!: Observable<Project[]>;
+  bucket: string = Config.bucketUrl;
 
   projectService = inject(ProjectService);
 

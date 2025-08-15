@@ -1,4 +1,3 @@
-import { ProjectConfig } from "./projectConfig";
 import { Technology } from "./technology";
 import { User } from "./user";
 
@@ -9,6 +8,7 @@ export interface Project {
     icon: string;
     user: User;
     config: string;
+    configJson: any;
     images: string[];
     technologies: Technology[];
 }

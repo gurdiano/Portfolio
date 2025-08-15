@@ -176,6 +176,9 @@
 .overlay-container .img-container {
     height: 90%;
     width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .overlay-container .img-container img{
     width: auto;
@@ -342,7 +345,7 @@
     width: 100%;
     height: 100%;
 }
-/* pothos */
+/* photos */
 .c-grid {
     width: 90%;
 }
@@ -358,6 +361,8 @@
     align-items: center;
     justify-content: center;
     margin: 0.5rem;
+    background-color: black;
+    cursor: pointer;
 }
 .c-grid .row .img-container img {
     object-fit: contain;
@@ -532,4 +537,31 @@
 }
 .accordion-button:not(.collapsed) .chevron-container svg {
   transform: rotate(90deg);
+}
+/* Style Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
 }

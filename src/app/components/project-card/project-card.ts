@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { BaseCard } from '../base-card/base-card';
 import { SlicePipe } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-project-card',
@@ -12,6 +13,7 @@ import { SlicePipe } from '@angular/common';
   styleUrl: './project-card.css'
 })
 export class ProjectCard {
+  @Input() id!: number;
   @Input() projectIcon!: string;
   @Input() name?: string = 'Project Name';
   @Input() description: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum illum quisquam est asperiores';
@@ -25,4 +27,16 @@ export class ProjectCard {
   @Input() techIconPath4!: string;
   @Input() gitRepository!: string;
   @Input() downloadLink!: string;
+  @Input() state!: {}; 
+
+  router = inject(Router)
+
+  goToProjectPage() {
+    this.router.navigate(
+      ['/projects', this.name, this.id], 
+      {
+        state: {project: this.state}
+      }
+    );
+  }
 }

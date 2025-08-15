@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { BaseCard } from '../../components/base-card/base-card';
 import { Config } from '../../app.config';
-import { AsyncPipe, SlicePipe, TitleCasePipe } from '@angular/common';
+import { AsyncPipe, JsonPipe, SlicePipe, TitleCasePipe } from '@angular/common';
 import { SkillsCard } from '../../components/skills-card/skills-card';
 import { SkillsService } from '../../services/skills/skills-service';
 import { Observable } from 'rxjs';
-import { UserTechProgress } from '../../models/user-tech-progress';
+import { FilterByIdsPipe } from './pipes/filter-by-ids-pipe';
+import { ExcludeByIdsPipe } from './pipes/exclude-by-ids-pipe';
 
 @Component({
   selector: 'app-skills',
@@ -15,6 +16,9 @@ import { UserTechProgress } from '../../models/user-tech-progress';
     TitleCasePipe,
     SlicePipe,
     AsyncPipe,
+    FilterByIdsPipe,
+    ExcludeByIdsPipe,
+    JsonPipe,
   ],
   templateUrl: './skills.html',
   styleUrl: './skills.css'
@@ -24,8 +28,11 @@ export class Skills {
   school = Config.school;
   sem = Config.sem;
   favorite = Config.skills.favorite;
+  mainStack = Config.mainStack;
+  secondaryStack = Config.secondaryStack;
+  others = this.mainStack.concat(this.secondaryStack);
 
-  technologies$!: Observable<UserTechProgress[]>;
+  technologies$!: Observable<any>;
 
   skillsService = inject(SkillsService);
 

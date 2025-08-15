@@ -107,5 +107,7 @@ export const Config = {
         role: 'Development',
       },
     ]
-  }
+  },
+  mainStack: [1],
+  secondaryStack: [2],
 };

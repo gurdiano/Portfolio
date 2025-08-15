@@ -9,10 +9,10 @@ import { Config } from '../../app.config';
 })
 export class SkillsService {
   private http = inject (HttpClient);
-  private apiUrl = 'http://pimenta.mercusysddns.com:5000/api';
+  private apiUrl = Config.apiUrl;
   private id = Config.userID;
 
   getUserTechProgress(): Observable<UserTechProgress[]> {
-    return this.http.get<UserTechProgress[]>(`${this.apiUrl}/UserTechnologyProgress/user/${this.id}`);
+    return this.http.get<UserTechProgress[]>(`${this.apiUrl}UserTechnologyProgress/user/${this.id}`);
   }
 }

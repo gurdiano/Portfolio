@@ -32,7 +32,7 @@ export const Config = {
   discordUrl: 'https://discord.com/',
   whatsappUrl: 'https://web.whatsapp.com/',
   bucketUrl: 'https://portfoliobucketts.s3.sa-east-1.amazonaws.com/',
-  apiUrl: 'http://pimenta.mercusysddns.com:5000/api/',
+  apiUrl: 'http://pimenta.mercusysddns.com:8091/api/',
   // about-page
   about: {
     subTitle: 'Freelancer Programmer, 25 years old, fascinated by logic and programming, Java enthusiast, lover of software architecture and projects.',
@@ -45,7 +45,7 @@ export const Config = {
     education: [
       {
         course: 'B.Sc. in Computer Science',
-        school: 'UNASP – São Paulo, Brazild',
+        school: 'UNASP – São Paulo, Brazil',
         period: 'Jan 2021 – Present (expected graduation: Dec 2025)',
         status: 'Completed 8 semesters',
       },

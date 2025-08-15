@@ -11,7 +11,7 @@ import { Config } from '../../app.config';
   imports: [
     ProjectCard,
     AsyncPipe,
-    JsonPipe
+    JsonPipe,
   ],
   templateUrl: './projects.html',
   styleUrl: './projects.css'

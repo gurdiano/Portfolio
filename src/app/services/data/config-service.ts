@@ -52,7 +52,8 @@ export interface AppConfig {
   skills: Skills,
   mainStack: number[],
   secondaryStack: number[],
-  roles: number[]
+  roles: number[],
+  contactDescription: string
 }
 export interface UserResponse {
   id: number,

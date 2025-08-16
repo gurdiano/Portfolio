@@ -21,8 +21,8 @@
                                 </div>
                                 
                                 <div class="info-container">
-                                    <h1>{{ name }}</h1>
-                                    <h2>{{ description }}</h2>
+                                    <h1>{{ config?.name }}</h1>
+                                    <h2>{{ config?.about?.subTitle }}</h2>
                                 </div>
                             </div>
                             <app-base-card></app-base-card>
@@ -38,10 +38,10 @@
                                 </div>
 
                                 <div class="text">
-                                    <h2>{{ bgSub }}</h2>
-                                    <p>{{ bgP1 }}</p>
-                                    <p>{{ bgP2 }}</p>
-                                    <p>{{ bgP3 }}</p>
+                                    <h2>{{ config?.about?.background?.subTitle }}</h2>
+                                    <p>{{ config?.about?.background?.P1}}</p>
+                                    <p>{{ config?.about?.background?.P2 }}</p>
+                                    <p>{{ config?.about?.background?.P3 }}</p>
                                 </div>
                             </div>
                             <app-base-card></app-base-card>
@@ -63,7 +63,7 @@
                                 </div>
 
                                 <div class="text">
-                                    @for (edu of education; track edu.course) {
+                                    @for (edu of config?.about?.education; track edu.course) {
                                         <h1>{{ edu.course }}</h1>
                                         <h2>{{ edu.school }}</h2>
                                         <h3>{{ edu.period }}</h3>
@@ -84,7 +84,7 @@
                                 </div>
 
                                 <div class="text">
-                                    @for (exp of experience; track exp.position){
+                                    @for (exp of config?.about?.experience; track exp.position){
                                         <h1>{{ exp.position }}</h1>
                                         <h2>{{ exp.company }}</h2>
                                         <h3>{{ exp.period }}</h3>

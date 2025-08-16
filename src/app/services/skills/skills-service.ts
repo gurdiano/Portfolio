@@ -1,15 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Config } from '../../app.config';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SkillsService {
   private http = inject (HttpClient);
-  private apiUrl = Config.apiUrl;
-  private id = Config.userID;
+  private apiUrl = environment.apiUrl;
+  private id = environment.userId;
 
   getUserTechProgress(): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}UserTechnologyProgress/user/${this.id}`);

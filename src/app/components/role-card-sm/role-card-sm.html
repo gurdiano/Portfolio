@@ -6,126 +6,24 @@
         </div>
 
         <div class="roles-container">
-            <div class="role">
-                <div class="info-container">
-                    <div class="img-container">
-                        <img class="c-img-fluid" src="assets/images/roles/neural-network-white.png" alt="Ícone">
+            @for (progress of roles; track progress){
+                <div class="role">
+                    <div class="info-container">
+                        <div class="img-container">
+                            <img class="c-img-fluid" [src]="progress.role.icon.path? bucket + progress.role.icon.path : 'assets/images/roles/neural-network-white.png'">
+                        </div>
+                        
+                        <div class="name-container">
+                            <p>{{ progress.role.name || 'Role' }}</p>
+                        </div>
                     </div>
-                    
-                    <div class="name-container">
-                        <p>Software Engineering</p>
-                    </div>
-                </div>
 
-                <div class="progress-container">
-                    <div class="progress-bar" [style.width.%]="softwareProgress">
+                    <div class="progress-container">
+                        <div class="progress-bar" [style.width.%]="progress.progress">
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="role">
-                <div class="info-container">
-                    <div class="img-container">
-                        <img class="c-img-fluid" src="assets/images/roles/data-science-white.png" alt="Ícone">
-                    </div>
-                    
-                    <div class="name-container">
-                        <p>Automation</p>
-                    </div>
-                </div>
-
-                <div class="progress-container">
-                    <div class="progress-bar" [style.width.%]="automationProgress">
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="role">
-                <div class="info-container">
-                    <div class="img-container">
-                        <img class="c-img-fluid" src="assets/images/roles/big-data-white.png" alt="Ícone">
-                    </div>
-                    
-                    <div class="name-container">
-                        <p>Cloud Computing</p>
-                    </div>
-                </div>
-
-                <div class="progress-container">
-                    <div class="progress-bar" [style.width.%]="cloudProgress">
-                    </div>
-                </div>
-            </div>
-
-            <div class="role">
-                <div class="info-container">
-                    <div class="img-container">
-                        <img class="c-img-fluid" src="assets/images/roles/sensor-white.png" alt="Ícone">
-                    </div>
-                    
-                    <div class="name-container">
-                        <p>Cybersecurity</p>
-                    </div>
-                </div>
-
-                <div class="progress-container">
-                    <div class="progress-bar" [style.width.%]="cybersecurityProgress">
-                    </div>
-                </div>
-            </div>
-
-            <div class="role">
-                <div class="info-container">
-                    <div class="img-container">
-                        <img class="c-img-fluid" src="assets/images/roles/data-engineer-white.png" alt="Ícone">
-                    </div>
-                    
-                    <div class="name-container">
-                        <p>Database Management</p>
-                    </div>
-                </div>
-
-                <div class="progress-container">
-                    <div class="progress-bar" [style.width.%]="databaseProgress">
-                    </div>
-                </div>
-            </div>
-
-            <div class="role">
-                <div class="info-container">
-                    <div class="img-container">
-                        <img class="c-img-fluid" src="assets/images/roles/architecture-white.png" alt="Ícone">
-                    </div>
-                    
-                    <div class="name-container">
-                        <p>Project Management</p>
-                    </div>
-                </div>
-
-                <div class="progress-container">
-                    <div class="progress-bar" [style.width.%]="managementProgress">
-                    </div>
-                </div>
-            </div>
-
-            <div class="role">
-                <div class="info-container">
-                    <div class="img-container">
-                        <img class="c-img-fluid" src="assets/images/roles/connection-white.png" alt="Ícone">
-                    </div>
-                    
-                    <div class="name-container">
-                        <p>Software Development</p>
-                    </div>
-                </div>
-
-                <div class="progress-container">
-                    <div class="progress-bar" [style.width.%]="developmentProgress">
-                    </div>
-                </div>
-            </div>
-            
+            }
         </div>
     </div>
 

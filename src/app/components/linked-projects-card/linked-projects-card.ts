@@ -1,15 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { BaseCard } from '../base-card/base-card';
-
-
-const Role = {
-  projects: [
-    {name: 'GurSchedule', icon:''},
-    {name: 'Indeniza', icon:''},
-    {name: 'Portfolio', icon:''},
-    {name: 'Portfolio', icon:''},
-  ]
-}
+import { Project } from '../../models/project';
+import { Config } from '../../app.config';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-linked-projects-card',
@@ -20,5 +13,12 @@ const Role = {
   styleUrl: './linked-projects-card.css'
 })
 export class LinkedProjectsCard {
-  @Input() role = Role;
+  @Input() projects!: Project[];
+  bucket = Config.bucketUrl;
+
+  router = inject(Router)
+
+  goToProject(name: string, id: number) {
+    this.router.navigate(['/projects', name, id]);
+  }
 }

@@ -20,6 +20,12 @@
                     <div class="progress-bar-container">
                         <div class="bar" [style.width.%]="techs.progress"></div>
                     </div>
+                    
+                    @if (techs.projects.length > 0) {
+                        <div class="projects-card">
+                            <app-linked-projects-card [projects]="techs.projects"></app-linked-projects-card>
+                        </div>
+                    }
                 </div>
             }
         </div>

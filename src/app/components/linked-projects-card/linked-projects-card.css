@@ -54,8 +54,10 @@ app-base-card {
     flex-direction: row;
     align-items: center;
     margin-bottom: var(--projects-mb);
-
-    /* border: 1px solid blue; */
+    cursor: pointer;
+}
+.project-container:hover {
+    background-color: var(--color-hover);
 }
 .project-container .avatar-icon {
     background-color: var(--color-default);

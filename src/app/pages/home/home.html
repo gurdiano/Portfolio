@@ -2,14 +2,44 @@
     <!-- Char -->
     <div class="character-container">
         <div class="roles-left">
-            <!-- Software Development -->
-            <app-role-card class="item-01" imagem="assets/images/roles/connection-white.png" name="Software Development" [progress]="developmentProgress">
-                <app-linked-projects-card></app-linked-projects-card>
-            </app-role-card>
-            <!-- Automation -->
-            <app-role-card class="item-02" imagem="assets/images/roles/data-science-white.png" name="Automation" [progress]="automationProgress"></app-role-card>
-            <!-- Database Management -->
-            <app-role-card class="item-03" imagem="assets/images/roles/data-engineer-white.png" name="Database Management" [progress]="databaseProgress"></app-role-card>
+            @if (roles$ | async; as roles){
+                <!-- Software Development -->
+                @if (roles | findRole:roleSequence[0]; as progress){
+                    <app-role-card 
+                    class="item-01" 
+                    [imagem]="progress.role.icon.path? bucket + progress.role.icon.path : 'assets/images/roles/data-engineer-white-2.png'" 
+                    [name]="progress.role.name || 'role'" 
+                    [progress]="progress.progress"
+                    >
+                        <app-linked-projects-card [projects]="progress.projects"></app-linked-projects-card>
+                    </app-role-card>
+                }
+                
+                <!-- Automation -->
+                 @if (roles | findRole:roleSequence[1]; as progress){
+                    <app-role-card 
+                    class="item-02" 
+                    [imagem]="progress.role.icon.path? bucket + progress.role.icon.path : 'assets/images/roles/data-engineer-white-2.png'" 
+                    [name]="progress.role.name || 'role'" 
+                    [progress]="progress.progress"
+                    >
+                        <app-linked-projects-card [projects]="progress.projects"></app-linked-projects-card>
+                    </app-role-card>
+                }
+
+                <!-- Database Management -->
+                @if (roles | findRole:roleSequence[2]; as progress){
+                    <app-role-card 
+                    class="item-03" 
+                    [imagem]="progress.role.icon.path? bucket + progress.role.icon.path : 'assets/images/roles/data-engineer-white-2.png'" 
+                    [name]="progress.role.name || 'role'" 
+                    [progress]="progress.progress"
+                    >
+                        <app-linked-projects-card [projects]="progress.projects"></app-linked-projects-card>
+                    </app-role-card>
+                }
+            }
+                
         </div>
     
         <div class="character">
@@ -32,40 +62,70 @@
         </div>
     
         <div class="roles-right">
-            <!-- Project Management -->
-            <app-role-card class="item-04" imagem="assets/images/roles/architecture-white.png" name="Project Management" [progress]="managementProgress"></app-role-card>
-            <!-- Cloud Computing -->
-            <app-role-card class="item-05" imagem="assets/images/roles/big-data-white.png" name="Cloud Computing" [progress]="cloudProgress"></app-role-card>
-            <!-- Cybersecurity -->
-            <app-role-card class="item-06" imagem="assets/images/roles/sensor-white.png" name="Cybersecurity" [progress]="cybersecurityProgress"></app-role-card>
-            <!-- Software Engineering -->
-            <app-role-card class="item-07" imagem="assets/images/roles/neural-network-white.png" name="Software Engineering" [progress]="softwareProgress"></app-role-card>
+            @if (roles$ | async; as roles){
+                <!-- Project Management -->
+                @if (roles | findRole:roleSequence[3]; as progress){
+                    <app-role-card 
+                    class="item-04" 
+                    [imagem]="progress.role.icon.path? bucket + progress.role.icon.path : 'assets/images/roles/data-engineer-white-2.png'" 
+                    [name]="progress.role.name || 'role'" 
+                    [progress]="progress.progress"
+                    >
+                        <app-linked-projects-card [projects]="progress.projects"></app-linked-projects-card>
+                    </app-role-card>
+                }
+                <!-- Cloud Computing -->
+                @if (roles | findRole:roleSequence[4]; as progress){
+                    <app-role-card 
+                    class="item-05" 
+                    [imagem]="progress.role.icon.path? bucket + progress.role.icon.path : 'assets/images/roles/data-engineer-white-2.png'" 
+                    [name]="progress.role.name || 'role'" 
+                    [progress]="progress.progress"
+                    >
+                        <app-linked-projects-card [projects]="progress.projects"></app-linked-projects-card>
+                    </app-role-card>
+                }
+                <!-- Cybersecurity -->
+                @if (roles | findRole:roleSequence[5]; as progress){
+                    <app-role-card 
+                    class="item-06" 
+                    [imagem]="progress.role.icon.path? bucket + progress.role.icon.path : 'assets/images/roles/data-engineer-white-2.png'" 
+                    [name]="progress.role.name || 'role'" 
+                    [progress]="progress.progress"
+                    >
+                        <app-linked-projects-card [projects]="progress.projects"></app-linked-projects-card>
+                    </app-role-card>
+                }
+                <!-- Software Engineering -->
+                @if (roles | findRole:roleSequence[6]; as progress){
+                    <app-role-card 
+                    class="item-07" 
+                    [imagem]="progress.role.icon.path? bucket + progress.role.icon.path : 'assets/images/roles/data-engineer-white-2.png'" 
+                    [name]="progress.role.name || 'role'" 
+                    [progress]="progress.progress"
+                    >
+                        <app-linked-projects-card [projects]="progress.projects"></app-linked-projects-card>
+                    </app-role-card>
+                }
+            }
         </div>
 
         <div class="role-card-sm-container">
-            <app-role-card-sm 
-            [automationProgress]="automationProgress" 
-            [developmentProgress]="developmentProgress"
-            [managementProgress]="managementProgress"
-            [cloudProgress]="cloudProgress"
-            [cybersecurityProgress]="cybersecurityProgress"
-            [softwareProgress]="softwareProgress"
-            [databaseProgress]="databaseProgress"
-            ></app-role-card-sm>
+            @if (roles$ | async; as roles){
+                <app-role-card-sm 
+                [roles]="roles" 
+                ></app-role-card-sm>
+            }
         </div>
     </div>
 
     <!-- Roles -->
     <div class="role-card-sm-container-2">
-            <app-role-card-sm 
-            [automationProgress]="automationProgress" 
-            [developmentProgress]="developmentProgress"
-            [managementProgress]="managementProgress"
-            [cloudProgress]="cloudProgress"
-            [cybersecurityProgress]="cybersecurityProgress"
-            [softwareProgress]="softwareProgress"
-            [databaseProgress]="databaseProgress"
-            ></app-role-card-sm>
+            @if (roles$ | async; as roles){
+                <app-role-card-sm 
+                [roles]="roles" 
+                ></app-role-card-sm>
+            }
     </div>
 
     <!-- Summary -->

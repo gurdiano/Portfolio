@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Config } from '../../app.config';
+import { Component, inject } from '@angular/core';
+import { AppConfig, ConfigService } from '../../services/data/config-service';
 
 @Component({
   selector: 'app-contact',
@@ -8,12 +8,11 @@ import { Config } from '../../app.config';
   styleUrl: './contact.css'
 })
 export class Contact {
-  name = Config.repName
-  linkedinUrl = Config.linkedinUrl
-  githubUrl = Config.githubUrl
-  emailUrl = Config.emailUrl
-  facebookUrl = Config.facebookUrl
-  instagramUrl = Config.instagramUrl
-  discordUrl = Config.discordUrl
-  whatsappUrl = Config.whatsappUrl
+  config!: AppConfig;
+
+  configService = inject(ConfigService);
+
+  constructor () {
+    this.config = this.configService.getConfig();
+  }
 }

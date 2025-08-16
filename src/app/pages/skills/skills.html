@@ -15,35 +15,33 @@
                 </div>
             </div>
             <div class="column-2">
-                <h1>{{ name }}</h1>
-                <h2 class="capitalize">{{ school | titlecase}}</h2>
+                <h1>{{ config?.name }}</h1>
+                <h2 class="capitalize">{{ config?.school | titlecase}}</h2>
 
                 <div class="lvl-container">
-                    <h3> LVL.{{ sem }} </h3>
+                    <h3> LVL.{{ config?.sem }} </h3>
                 </div>
             </div>
 
             <div class="useless-container"></div>
 
             <div class="column-3">
-                @if (favorite[0]) {
+                @if (config.skills.favorite?.[0]) {
                     <div class="role-container" id="role-1">
-                        <img [src]="favorite[0].icon || 'assets/images/roles/connection-white.png'">
-                        <h1>{{ favorite[0].role }}</h1>
+                        <img [src]="config? bucket + config.skills.favorite[0].icon : 'assets/images/roles/connection-white.png'">
+                        <h1>{{ config? config.skills.favorite[0].role : 'Void' }}</h1>
                     </div>
                 }
-                
-                @if (favorite[1]) {
+                @if (config.skills.favorite?.[1] ) {
                     <div class="role-container" id="role-2">
-                        <img [src]="favorite[1].icon || 'assets/images/roles/connection-white.png'">
-                        <h1>{{ favorite[1].role }}</h1>
+                        <img [src]="config? bucket + config.skills.favorite[1].icon : 'assets/images/roles/connection-white.png'">
+                        <h1>{{ config? config.skills.favorite[1].role : 'Void' }}</h1>
                     </div>
                 }
-
-                @if (favorite[2]) {
+                @if (config.skills.favorite?.[2]) {
                     <div class="role-container" id="role-3">
-                        <img [src]="favorite[2].icon || 'assets/images/roles/connection-white.png'">
-                        <h1>{{ favorite[2].role }}</h1>
+                        <img [src]="config? bucket + config.skills.favorite[2].icon : 'assets/images/roles/connection-white.png'">
+                        <h1>{{ config? config.skills.favorite[2].role : 'Void' }}</h1>
                     </div>
                 }
             </div>
@@ -53,8 +51,10 @@
     </div>
 
     @if (technologies$ | async; as tech) {
-        <app-skills-card stackName='main' [technologies]="tech | filterByIds:mainStack"></app-skills-card>
-        <app-skills-card stackName='secondary' [technologies]="tech | filterByIds:secondaryStack"></app-skills-card>
-        <app-skills-card stackName='others' [technologies]="tech | excludeByIds:others"></app-skills-card>
+        <app-skills-card stackName='main' [technologies]="tech | filterByIds:config?.mainStack || []"></app-skills-card>
+        <app-skills-card stackName='secondary' [technologies]="tech | filterByIds:config?.secondaryStack || []"></app-skills-card>
+        @if (config.mainStack && config.secondaryStack) {
+            <app-skills-card stackName='others' [technologies]="tech | excludeByIds:config.mainStack.concat(config.secondaryStack)"></app-skills-card>
+        }
     }
 </div>

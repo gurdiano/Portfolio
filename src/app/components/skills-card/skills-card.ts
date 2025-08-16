@@ -1,7 +1,7 @@
 import { AsyncPipe, JsonPipe, NgClass, UpperCasePipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Config } from '../../app.config';
 import { LinkedProjectsCard } from '../linked-projects-card/linked-projects-card';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-skills-card',
@@ -18,5 +18,5 @@ import { LinkedProjectsCard } from '../linked-projects-card/linked-projects-card
 export class SkillsCard {
   @Input() stackName?: string = 'stack';
   @Input() technologies!: any;
-  bucket = Config.bucketUrl;
+  bucket = environment.bucketUrl;
 }

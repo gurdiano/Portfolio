@@ -1,10 +1,12 @@
 <div class="home">
+    <!-- <h3>config:: {{ config | json }}</h3> -->
+
     <!-- Char -->
     <div class="character-container">
         <div class="roles-left">
             @if (roles$ | async; as roles){
                 <!-- Software Development -->
-                @if (roles | findRole:roleSequence[0]; as progress){
+                @if (roles | findRole:config?.roles?.[0] ?? 0; as progress){
                     <app-role-card 
                     class="item-01" 
                     [imagem]="progress.role.icon.path? bucket + progress.role.icon.path : 'assets/images/roles/data-engineer-white-2.png'" 
@@ -16,7 +18,7 @@
                 }
                 
                 <!-- Automation -->
-                 @if (roles | findRole:roleSequence[1]; as progress){
+                 @if (roles | findRole:config?.roles?.[1] ?? 0; as progress){
                     <app-role-card 
                     class="item-02" 
                     [imagem]="progress.role.icon.path? bucket + progress.role.icon.path : 'assets/images/roles/data-engineer-white-2.png'" 
@@ -28,7 +30,7 @@
                 }
 
                 <!-- Database Management -->
-                @if (roles | findRole:roleSequence[2]; as progress){
+                @if (roles | findRole:config?.roles?.[2] ?? 0; as progress){
                     <app-role-card 
                     class="item-03" 
                     [imagem]="progress.role.icon.path? bucket + progress.role.icon.path : 'assets/images/roles/data-engineer-white-2.png'" 
@@ -45,7 +47,7 @@
         <div class="character">
             <div class="classType">
                 <p class="p1">CLASS</p>
-                <P class="p2">{{ school }}</P>
+                <P class="p2">{{ config?.school }}</P>
             </div>
 
             <div class="avatar-container">
@@ -57,14 +59,14 @@
             </div>
             
             <div class="name">
-                <h1>{{name}}</h1>
+                <h1>{{config?.name}}</h1>
             </div>
         </div>
     
         <div class="roles-right">
             @if (roles$ | async; as roles){
                 <!-- Project Management -->
-                @if (roles | findRole:roleSequence[3]; as progress){
+                @if (roles | findRole:config?.roles?.[3] ?? 0; as progress){
                     <app-role-card 
                     class="item-04" 
                     [imagem]="progress.role.icon.path? bucket + progress.role.icon.path : 'assets/images/roles/data-engineer-white-2.png'" 
@@ -75,7 +77,7 @@
                     </app-role-card>
                 }
                 <!-- Cloud Computing -->
-                @if (roles | findRole:roleSequence[4]; as progress){
+                @if (roles | findRole:config?.roles?.[4] ?? 0; as progress){
                     <app-role-card 
                     class="item-05" 
                     [imagem]="progress.role.icon.path? bucket + progress.role.icon.path : 'assets/images/roles/data-engineer-white-2.png'" 
@@ -86,7 +88,7 @@
                     </app-role-card>
                 }
                 <!-- Cybersecurity -->
-                @if (roles | findRole:roleSequence[5]; as progress){
+                @if (roles | findRole:config?.roles?.[5] ?? 0; as progress){
                     <app-role-card 
                     class="item-06" 
                     [imagem]="progress.role.icon.path? bucket + progress.role.icon.path : 'assets/images/roles/data-engineer-white-2.png'" 
@@ -97,7 +99,7 @@
                     </app-role-card>
                 }
                 <!-- Software Engineering -->
-                @if (roles | findRole:roleSequence[6]; as progress){
+                @if (roles | findRole:config?.roles?.[6] ?? 0; as progress){
                     <app-role-card 
                     class="item-07" 
                     [imagem]="progress.role.icon.path? bucket + progress.role.icon.path : 'assets/images/roles/data-engineer-white-2.png'" 

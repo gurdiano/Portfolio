@@ -3,7 +3,7 @@ import { BaseCard } from '../../components/base-card/base-card';
 import { JsonPipe, SlicePipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Project as ProjectModel } from '../../models/project';
-import { Config } from '../../app.config';
+import { environment } from '../../../environments/environment';
 
 
 @Component({
@@ -17,13 +17,14 @@ import { Config } from '../../app.config';
   styleUrl: './project.css'
 })
 export class Project {
-  bucket = Config.bucketUrl
   project!: ProjectModel;
-  route = inject(ActivatedRoute);
   selectedImage: string | null = null;
+  bucket = environment.bucketUrl
 
+  route = inject(ActivatedRoute);
+  
   constructor () {
-    this.project = this.route.snapshot.data['project']
+    this.project = this.route.snapshot.data['project'];
   }
 
   openImage(img: string) {

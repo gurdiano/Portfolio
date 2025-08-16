@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { Config } from '../../app.config';
 import { RoleCard } from '../../components/role-card/role-card';
 import { RoleCardSm } from '../../components/role-card-sm/role-card-sm';
 import { BaseCard } from '../../components/base-card/base-card';
@@ -10,6 +9,8 @@ import { RolesService } from '../../services/roles/roles-service';
 import { Observable } from 'rxjs';
 import { AsyncPipe, JsonPipe } from '@angular/common';
 import { FindRolePipe } from './pipes/find-role-pipe';
+import { AppConfig, ConfigService } from '../../services/data/config-service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -27,14 +28,15 @@ import { FindRolePipe } from './pipes/find-role-pipe';
   styleUrl: './home.css'
 })
 export class Home {
-  school = Config.school;
-  name = Config.repName;
-  roleSequence = Config.roles;
-  bucket = Config.bucketUrl;
   roles$!: Observable<UserRoleProgress[]>;
+  config!: AppConfig;
+  bucket = environment.bucketUrl;
+  
   rolesService = inject(RolesService);
+  configService = inject(ConfigService);
   
   constructor () {
     this.roles$ = this.rolesService.getRolesProgress();
+    this.config = this.configService.getConfig();
   }
 }

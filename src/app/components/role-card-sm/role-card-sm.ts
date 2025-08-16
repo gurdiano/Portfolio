@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { UserRoleProgress } from '../../models/user-role-progress';
-import { Config } from '../../app.config';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-role-card-sm',
@@ -10,5 +10,5 @@ import { Config } from '../../app.config';
 })
 export class RoleCardSm {
   @Input() roles!: UserRoleProgress[];
-  bucket = Config.bucketUrl;
+  bucket = environment.bucketUrl;
 }

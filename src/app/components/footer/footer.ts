@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Config } from '../../app.config';
+import { Component, inject } from '@angular/core';
+import { AppConfig, ConfigService } from '../../services/data/config-service';
 
 @Component({
   selector: 'app-footer',
@@ -8,8 +8,11 @@ import { Config } from '../../app.config';
   styleUrl: './footer.css'
 })
 export class Footer {
-  name = Config.repName;
-  copy = Config.copyright;
-  linkedinName = Config.likedin;
-  emailName = Config.email;
+  config!: AppConfig;
+  
+  configService = inject(ConfigService);
+
+  constructor () {
+    this.config = this.configService.getConfig();
+  }
 }

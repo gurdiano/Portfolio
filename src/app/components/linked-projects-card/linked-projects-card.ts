@@ -1,8 +1,8 @@
 import { Component, inject, Input } from '@angular/core';
 import { BaseCard } from '../base-card/base-card';
 import { Project } from '../../models/project';
-import { Config } from '../../app.config';
 import { Router } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-linked-projects-card',
@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 })
 export class LinkedProjectsCard {
   @Input() projects!: Project[];
-  bucket = Config.bucketUrl;
+  bucket = environment.bucketUrl;
 
   router = inject(Router)
 

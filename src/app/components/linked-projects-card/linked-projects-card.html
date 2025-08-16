@@ -5,14 +5,13 @@
         </div>
 
         <div class="projects"> 
-            @for (project of role.projects; track project){
-                <div class="project-container">
+            @for (project of projects; track project){ 
+                <div class="project-container" (click)="goToProject(project.name, project.id)">
                     <div class="avatar-icon">
-                        <img [src]="project.icon || 'favicon.ico'" alt="">
+                        <img [src]="project.icon? bucket + project.icon : 'favicon.ico'">
                     </div>
 
                     <h1> {{ project.name }}</h1>
-
                 </div>
             }
         </div>

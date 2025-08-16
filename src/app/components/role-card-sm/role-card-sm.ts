@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { UserRoleProgress } from '../../models/user-role-progress';
+import { Config } from '../../app.config';
 
 @Component({
   selector: 'app-role-card-sm',
@@ -7,11 +9,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './role-card-sm.css'
 })
 export class RoleCardSm {
-  @Input() automationProgress?: number;
-  @Input() developmentProgress?: number;
-  @Input() managementProgress?: number;
-  @Input() cloudProgress?: number;
-  @Input() cybersecurityProgress?: number;
-  @Input() softwareProgress?: number;
-  @Input() databaseProgress?: number;
+  @Input() roles!: UserRoleProgress[];
+  bucket = Config.bucketUrl;
 }

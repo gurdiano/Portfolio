@@ -108,6 +108,9 @@ export const Config = {
       },
     ]
   },
+  // new
   mainStack: [1],
   secondaryStack: [2],
+  // Roles
+  roles: [4,6,5,2,3,8,7]
 };

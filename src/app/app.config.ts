@@ -14,7 +14,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withFetch()),
     provideAppInitializer(() => {
       const configService = inject(ConfigService);
-      configService.loadConfig();
+      return configService.loadConfig();
     }),
   ]
 };

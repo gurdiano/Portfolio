@@ -1,5 +1,5 @@
 .app-background {
-    background-image: var(--bg-short);
+    background-image: var(--bg-short-4096);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100% auto; 
@@ -11,7 +11,7 @@
     flex-direction: column;
 }
 .home-active {
-    background-image: var(--bg-main);
+    background-image: var(--bg-main-4096);
     background-color: var(--color-main-bg);
     background-repeat: no-repeat;
     background-position: top center;
@@ -27,4 +27,29 @@ main {
     flex-grow: 1;
     width: 95%;
     margin: auto;
+}
+
+@media (max-width: 1920px) {
+    .app-background {
+        background-image: var(--bg-short-1920);
+    }
+    .home-active {
+        background-image: var(--bg-main-1920);
+    }
+}
+@media (max-width: 1024px) {
+    .app-background {
+        background-image: var(--bg-short-1024);
+    }
+    .home-active {
+        background-image: var(--bg-main-1024);
+    }
+}
+@media (max-width: 768px) {
+    .app-background {
+        background-image: var(--bg-short-768);
+    }
+    .home-active {
+        background-image: var(--bg-main-768);
+    }
 }

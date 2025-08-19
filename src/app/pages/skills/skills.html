@@ -11,7 +11,12 @@
         <div class="card-overlay">
             <div class="column-1">
                 <div class="avatar-container">
-                    <img src="assets\avatar\char.png" alt="">
+                    <picture>
+                        <source media="(min-width: 1920px)" srcset="assets/avatar/char-4.png">
+                        <source media="(min-width: 1024px)" srcset="assets/avatar/char-3.png">
+                        <source media="(min-width: 768px)"  srcset="assets/avatar/char-2.png">
+                        <img src="assets/avatar/char-1.png" alt="Avatar responsivo">
+                    </picture>
                 </div>
             </div>
             <div class="column-2">

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, shareReplay } from 'rxjs';
 import { UserRoleProgress } from '../../models/user-role-progress';
 import { environment } from '../../../environments/environment';
 
@@ -13,6 +13,6 @@ export class RolesService {
   userId = environment.userId;
 
   getRolesProgress(): Observable<UserRoleProgress[]> {
-    return this.http.get<UserRoleProgress[]>(`${this.apiUrl}UserRoleProgress/user/${this.userId}`);
+    return this.http.get<UserRoleProgress[]>(`${this.apiUrl}UserRoleProgress/user/${this.userId}`).pipe(shareReplay());
   }
 }

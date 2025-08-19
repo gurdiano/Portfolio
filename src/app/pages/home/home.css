@@ -17,6 +17,8 @@
     --mt-item-05-base: -1rem;
     --mt-item-06-base: 0.1rem;
     --mt-item-07-base: 1.6rem;
+
+    --avatar-img-src: url('/assets/avatar/char-4.png');
 }
 :host {
     --avatar-width: var(--avatar-width-base);
@@ -87,7 +89,7 @@
     position: relative;
 }
 .avatar {
-    background: url('/assets/avatar/char.png');
+    background: var(--avatar-img-src);
     width: 30%;
     height: 94%;
     background-repeat: no-repeat;
@@ -318,6 +320,11 @@ app-base-card{
         max-width: 1920px;
     }
 }
+@media (max-width: 1920px){
+    :host {
+        --avatar-img-src: url('/assets/avatar/char-3.png');
+    }
+}
 @media (max-width: 1700px){
     :host {
         --avatar-width: calc(var(--avatar-width-base) - 10rem);
@@ -394,6 +401,9 @@ app-base-card{
     .character-container{
         margin-bottom: 2rem;
     }
+    :host {
+        --avatar-img-src: url('/assets/avatar/char-2.png');
+    }
 }
 @media (max-width: 768px) {
     .role-card-sm-container{
@@ -418,6 +428,10 @@ app-base-card{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    
+    :host {
+        --avatar-img-src: url('/assets/avatar/char-1.png');
     }
 }
 

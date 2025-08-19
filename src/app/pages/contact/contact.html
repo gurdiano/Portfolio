@@ -62,7 +62,12 @@
         </div>
 
         <div class="png-container">
-            <img src="assets\person\self-2.png" alt="">
+            <picture>
+                <source media="(min-width: 2560px)" srcset="assets/person/self-2-max.png">
+                <source media="(min-width: 1920x)" srcset="assets/person/self-2-hg.png">
+                <source media="(min-width: 1024px)" srcset="assets/person/self-2-sm.png">
+                <img src="assets/person/self-2-lw.png" alt="Avatar responsivo">
+            </picture>
         </div>
     </div>
 </div>

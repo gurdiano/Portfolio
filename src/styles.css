@@ -9,8 +9,15 @@
     --color-default: #1B222680;
     --color-hover: #ffffff33;
     
-    --bg-short: url('/assets/images/bg-short.png');
-    --bg-main: url('/assets/images/bg-main.png');
+    --bg-short-4096: url('/assets/images/bg-short-4096.png');
+    --bg-short-1920: url('/assets/images/bg-short-1920.png');
+    --bg-short-1024: url('/assets/images/bg-short-1024.png');
+    --bg-short-768: url('/assets/images/bg-short-768.png');
+    
+    --bg-main-4096: url('/assets/images/bg-main-4096.png');
+    --bg-main-1920: url('/assets/images/bg-main-1920.png');
+    --bg-main-1024: url('/assets/images/bg-main-1024.png');
+    --bg-main-768: url('/assets/images/bg-main-768.png');
 
     --ts-40: 2.5rem;
     --ts-30: 1.8rem;
